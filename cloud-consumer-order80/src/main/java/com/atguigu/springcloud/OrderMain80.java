@@ -11,7 +11,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class OrderMain80 {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderMain80.class);
+        SpringApplication.run(OrderMain80.class, args);
     }
 
 }

@@ -11,7 +11,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class PaymentMain8001 {
 
     public static void main(String[] args) {
-        SpringApplication.run(PaymentMain8001.class);
+        SpringApplication.run(PaymentMain8001.class, args);
     }
 
 }
