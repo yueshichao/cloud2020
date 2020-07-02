@@ -19,12 +19,13 @@ public class PaymentService {
         return "线程池：" + Thread.currentThread().getName() + ", paymentInfo_OK, id: " + id + "\t 正确！";
     }
 
-    @HystrixCommand(fallbackMethod = "paymentInfo_TimeoutHandler")
-    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")
+    @HystrixCommand(fallbackMethod = "paymentInfo_TimeoutHandler", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000")
+    })
     public String paymentInfo_Timeout(Integer id) {
         if (id % 2 == 0) throw new RuntimeException("运行异常，服务降级");
         try {
-            TimeUnit.SECONDS.sleep(5);
+            TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
