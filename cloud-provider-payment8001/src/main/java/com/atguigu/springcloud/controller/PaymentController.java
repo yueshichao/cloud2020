@@ -38,7 +38,7 @@ public class PaymentController {
     }
 
     @ApiOperation("获取订单")
-    @GetMapping(value = "/payment/get{id}")
+    @GetMapping(value = "/payment/get/{id}")
     public CommonResult<Payment> getPaymentId(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);
 
@@ -60,6 +60,11 @@ public class PaymentController {
             log.info("{} \t {} \t {} \t {}", instance.getServiceId(), instance.getHost(), instance.getPort(), instance.getUri());
         }
         return discoveryClient;
+    }
+
+    @GetMapping(value = "/payment/lb")
+    public String getPaymentLB() {
+        return serverPort;
     }
 
     @GetMapping("/payment/feign/timeout")
