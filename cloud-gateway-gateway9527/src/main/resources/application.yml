@@ -15,11 +15,24 @@ spring:
           uri: http://localhost:8001
           predicates:
             - Path=/payment/lb/**
-eureka:
-  instance:
-    hostname: cloud-gateway-service
-  client:
-    service-url:
-      register-with-eureka: true
-      fetch-registry: true
-      defaultZone: http://eureka7001.com:7001/eureka
+      enabled: true
+      discovery:
+        locator:
+          lower-case-service-id: true
+          enabled: true
+    # 注册中心
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #配置nacos地址
+        namespace: default
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8060 #配置Sentinel dashboard地址
+#        port: 8719
+#        client-ip: 127.0.0.1 # docker启动需要此配置项
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
