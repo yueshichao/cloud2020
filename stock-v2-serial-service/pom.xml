@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>stock-v2-service9002</artifactId>
+    <artifactId>stock-v2-serial-service</artifactId>
 
 
     <dependencies>
@@ -94,5 +94,6 @@
 
 
     </dependencies>
+
 
 </project>

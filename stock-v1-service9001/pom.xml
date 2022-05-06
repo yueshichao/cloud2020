@@ -13,6 +13,11 @@
 
 
     <dependencies>
+        <dependency>
+            <groupId>com.atguigu.springcloud</groupId>
+            <artifactId>stock-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!-- SpringBoot整合Web组件 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

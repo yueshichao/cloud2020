@@ -41,6 +41,8 @@
         <module>seata-order-service2001</module>
         <module>stock-v1-service9001</module>
         <module>stock-v2-service9002</module>
+        <module>stock-v2-serial-service</module>
+        <module>stock-api</module>
     </modules>
 
     <!-- 统一jar包管理 -->

@@ -1,4 +1,4 @@
-package com.lsz.stock.v2.po;
+package com.lsz.stock.api.po;
 
 import lombok.Data;
 

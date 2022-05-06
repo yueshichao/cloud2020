@@ -1,6 +1,6 @@
-package com.lsz.stock.v2.dao;
+package com.lsz.stock.v1.dao;
 
-import com.lsz.stock.v2.po.StockPO;
+import com.lsz.stock.api.po.StockPO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

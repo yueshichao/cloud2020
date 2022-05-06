@@ -1,4 +1,4 @@
-package com.lsz.stock.v2.dao;
+package com.lsz.stock.v2.serial.dao;
 
 import com.lsz.stock.api.po.StockPO;
 import org.apache.ibatis.annotations.Mapper;
@@ -9,6 +9,8 @@ public interface StockDao {
 
     int insert(StockPO stockPO);
 
-    int decr(@Param("skuId") Long skuId);
+    int decr(@Param("skuId") Long skuId, @Param("num") Long num);
+
+    StockPO selectOne(@Param("skuId") Long skuId);
 
 }

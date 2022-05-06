@@ -1,8 +1,8 @@
-package com.lsz.stock.v2.controller;
+package com.lsz.stock.v1.controller;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.text.StrFormatter;
-import com.lsz.stock.v2.dao.StockDao;
+import com.lsz.stock.v1.dao.StockDao;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

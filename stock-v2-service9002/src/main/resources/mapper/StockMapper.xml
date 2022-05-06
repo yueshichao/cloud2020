@@ -3,7 +3,7 @@
 
 <mapper namespace="com.lsz.stock.v2.dao.StockDao">
 
-    <resultMap id="BaseResultMap" type="com.lsz.stock.v2.po.StockPO">
+    <resultMap id="BaseResultMap" type="com.lsz.stock.api.po.StockPO">
         <id column="id" property="skuId" jdbcType="BIGINT"/>
         <result column="stock" property="stock" jdbcType="INTEGER"/>
     </resultMap>
