@@ -1,0 +1,21 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: stock-v1-service
+  cloud:
+    zookeeper:
+      discovery:
+        enabled: true
+      connect-string: lsz.env.com:2181
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://lsz.env.com:3307/stock
+    username: root
+    password: 123456
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
