@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lsz.stock.v2.serial.dao.StockSerialDao">
+
+    <resultMap id="BaseResultMap" type="com.lsz.stock.api.po.StockSerialPO">
+        <id column="id" property="skuId" jdbcType="BIGINT"/>
+        <result column="serial_id" property="serialId" jdbcType="VARCHAR"/>
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="sku_id" property="skuId" jdbcType="BIGINT"/>
+        <result column="stock_delta" property="stockDelta" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <insert id="insert">
+        INSERT INTO `t_sku_serial`(`serial_id`, `type`, `sku_id`, `stock_delta`)
+        VALUES (#{serialId}, #{type}, #{skuId}, #{stockDelta});
+    </insert>
+
+
+</mapper>
+
+

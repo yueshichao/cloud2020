@@ -11,7 +11,7 @@ spring:
       connect-string: lsz.env.com:2181
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://lsz.env.com:3307/stock
+    url: jdbc:mysql://lsz.env.com:3307/stock?characterEncoding=utf8&useSSL=false
     username: root
     password: 123456
 

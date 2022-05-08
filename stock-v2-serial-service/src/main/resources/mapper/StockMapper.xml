@@ -19,6 +19,13 @@
         where id = ${skuId}
         and stock - #{num} >= 0
     </update>
+
+    <update id="incr">
+        update t_stock
+        set stock = stock + #{num}
+        where id = ${skuId}
+    </update>
+
     <select id="selectOne" resultType="com.lsz.stock.api.po.StockPO">
         select * from t_stock
         where id = #{skuId}

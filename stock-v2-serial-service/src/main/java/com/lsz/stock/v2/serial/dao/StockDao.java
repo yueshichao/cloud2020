@@ -11,6 +11,8 @@ public interface StockDao {
 
     int decr(@Param("skuId") Long skuId, @Param("num") Long num);
 
+    int incr(@Param("skuId") Long skuId, @Param("num") Long num);
+
     StockPO selectOne(@Param("skuId") Long skuId);
 
 }

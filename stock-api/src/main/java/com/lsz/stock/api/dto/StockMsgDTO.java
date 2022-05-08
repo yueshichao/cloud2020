@@ -4,6 +4,8 @@ import com.lsz.stock.api.en.StockMsgEnum;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.util.Date;
+
 /**
  * 消息场景：
  * 库存扣减
@@ -22,6 +24,8 @@ public class StockMsgDTO {
     private Long num;
 
     private String serialId;
+
+    private Date operateDate;
 
 
 }
